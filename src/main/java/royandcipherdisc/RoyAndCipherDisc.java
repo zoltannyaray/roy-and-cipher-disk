@@ -3,6 +3,9 @@ package royandcipherdisc;
 public class RoyAndCipherDisc {
 
     public String encryptMessage(String input) {
+        if ( input == null ) {
+            throw new RuntimeException("Input must not be null!");
+        }
         String encryptedMessage = "";
         if (input.length() > 0) {
             String alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -15,7 +18,7 @@ public class RoyAndCipherDisc {
                 } else if (charDiff < -12) {
                     charDiff += alphabet.length();
                 }
-                encryptedMessage = encryptedMessage + charDiff + " ";
+                encryptedMessage += charDiff + " ";
                 previousCharIndex = currentCharIndex;
             }
         }
