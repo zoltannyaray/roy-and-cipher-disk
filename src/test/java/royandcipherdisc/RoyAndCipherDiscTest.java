@@ -26,7 +26,7 @@ public class RoyAndCipherDiscTest {
     }
     
     @Test(dataProvider="inputExpectedOutput")
-    public void getMaxNestingLevelInKQuotedStringShouldReturnExpectedValues( String input, String expected ) {
+    public void encryptMessageShouldReturnExpectedValues( String input, String expected ) {
         String actual = royAndCipherDisc.encryptMessage(input);
         assertEquals(actual, expected);
     }
